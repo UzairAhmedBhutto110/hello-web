@@ -1,0 +1,48 @@
+ 
+task2. 
+ 
+1. How many requests did the page make?
+6 requests (visible on the bottom-left status bar).
+
+2. What is the largest file, and what type is it?
+www.wikipedia.org is the largest transferred file at 0.8 kB, and its type is document (HTML).
+
+(Note: The other files show (disk cache) because they were loaded from your local browser cache rather than re-downloaded over the network).
+
+3. Find one request that is not 200. What status is it, and what do you think happened?
+Request: www.wikipedia.org
+
+Status: 304 (Not Modified)
+
+What happened: A 304 status code means your browser sent a conditional request to the server asking if the main web page had changed since it was last downloaded. The server responded that nothing had changed, so the browser reused its locally cached copy instead of sending a fresh copy across the network.
+task 3.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hello Web</title>
+</head>
+<body>
+  <h1>Welcome to My Page</h1>
+  
+  <!-- Added second heading & link to a learning resource -->
+  <h2>Learning Resources</h2>
+  <p><a href="https://developer.mozilla.org" target="_blank">MDN Web Docs</a></p>
+
+  <!-- Changed button text to something personal -->
+  <button>Click here to explore!</button>
+</body>
+</html>
+Note: The yellow background did not survive the reload because modifying styles in the DevTools Console only temporarily changes the DOM in temporary memory (RAM). Reloading forces the browser to re-fetch the original index.html file from disk/server.
+task4.
+Install/PATH Issue:
+
+I encountered no PATH or installation issues during setup. (Or mention a specific issue if you had one, e.g., "I had to restart VS Code before terminal recognized Git.")
+
+Why we refuse file://:
+
+We avoid file:// in this course because it bypasses standard HTTP security rules, blocks cross-origin requests (CORS), and does not simulate how a real web server serves files over the internet.
+
+DevTools habit:
+
+Moving forward, I will keep the DevTools Console open at all times while coding to immediately spot syntax errors and broken link warnings.
